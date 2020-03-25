@@ -1,4 +1,8 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
 header("Content-Type: image/png");
 $im = @imagecreate(500, 100)
 	or die("Cannot Initialize new GD image stream");
