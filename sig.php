@@ -48,20 +48,20 @@ if (!isset($_GET["u"]) || strlen($_GET["u"]) === 0) {
 
 		$rank = $data["rank"];
 		if ($rank !== 0) {
-			imagestring($im, 5, 400, 10, "Rank #" . $rank, $primary);
+			imagestring($im, 5, 400, 10, "Rank #" . number_format($rank), $primary);
 		}
 
 		$units = $data["wus"];
-		imagestring($im, 5, 10, 25, $units . " work unit" . ($units == 1 ? "" : "s") . " completed.", $primary);
+		imagestring($im, 5, 10, 25, number_format($units) . " work unit" . ($units == 1 ? "" : "s") . " completed.", $primary);
 
 		$credits = $data["credit"];
-		imagestring($im, 5, 10, 40, $credits . " credit" . ($credits == 1 ? "" : "s") . " earned.", $primary);
+		imagestring($im, 5, 10, 40, number_format($credits) . " credit" . ($credits == 1 ? "" : "s") . " earned.", $primary);
 
 		$team = $data["teams"][0];
 		imagestring($im, 5, 10, 55, "Team: " . cutOffExcess($team["name"], 30), $primary);
 
 		$wus = $team["wus"];
-		imagestring($im, 5, 10, 70, $wus . " work unit" . ($wus == 1 ? "" : "s") . " completed for this team", $primary);
+		imagestring($im, 5, 10, 70, number_format($wus) . " work unit" . ($wus == 1 ? "" : "s") . " completed for this team", $primary);
 	}
 }
 
