@@ -48,7 +48,8 @@ if (!isset($_GET["u"]) || strlen($_GET["u"]) === 0) {
 
 		$rank = $data["rank"];
 		if ($rank !== 0) {
-			imagestring($im, 5, 400, 10, "Rank #" . number_format($rank), $primary);
+			$ranklength = strlen(number_format($rank));
+			imagestring($im, 5, 430 - ($ranklength * 8), 10, "Rank #" . number_format($rank), $primary);
 		}
 
 		$units = $data["wus"];
