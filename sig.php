@@ -33,7 +33,7 @@ if (!isset($_GET["u"]) || strlen($_GET["u"]) === 0) {
 	imagestring($im, 5, 0, 0,  "Invalid request.", $error_color);
 } else {
 	$user = $_GET["u"];
-	$d = @file_get_contents("https://stats.foldingathomae.org/api/donor/" . $user);
+	$d = @file_get_contents("https://stats.foldingathome.org/api/donor/" . $user);
 	if (!$d) {
 		imagestring($im, 3, 5, 5,  "Something went wrong. This can happen because of three reasons:", $error_color);
 		imagestring($im, 3, 5, 15,  "1) A server error occured at FAHSignature.", $error_color);
