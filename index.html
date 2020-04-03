@@ -101,6 +101,13 @@
 		if (user === "") {
 			user = "Anonymous";
 		}
+
+		// Anti parameter pollution.
+		if (user.match(/\..\/|&|=|\?/g)) {
+			alert('Your username contains invalid characters. (&, =, ?, ., /)');
+			return;
+		}
+
 		document.getElementById("previewBox").style.display = "block";
 		var theme = document.getElementById("theme").value;
 		if (theme === "light_bg" || theme === "dark_txt") {

@@ -69,7 +69,7 @@ if (!isset($_GET["u"]) || strlen($_GET["u"]) === 0) {
 
 if (!isset($_GET["c"]) || $_GET["c"] !== "false") {
 	$creditcolor = imagecolorallocate($im, 150, 150, 150);
-	imagestring($im, 1, 290, 85, "https://noahvdaa.github.io/FAHSignature/", $creditcolor);
+	imagestring($im, 1, 325, 85, "https://noahvdaa.me/FAHSignature/", $creditcolor);
 }
 
 imagepng($im);
