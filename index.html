@@ -1,6 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 
+<!-- 
+       ___  
+      /  .\ 
+     /  =__|  woof
+    /    ||
+-->
+
 <head>
 	<title>FAHSignature</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -119,6 +126,12 @@
 	function hideLoad() {
 		document.getElementById("imageLoading").remove();
 	}
+	document.getElementById("username").addEventListener("keyup", function (event) {
+		if (event.keyCode === 13) {
+			event.preventDefault();
+			generate();
+		}
+	});
 </script>
 <style>
 	#previewBox {
