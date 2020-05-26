@@ -70,8 +70,10 @@ if (!isset($_GET["u"]) || strlen($_GET["u"]) === 0) {
 
 if (!isset($_GET["c"]) || $_GET["c"] !== "false") {
 	$creditcolor = imagecolorallocate($im, 150, 150, 150);
-	imagestring($im, 1, 325, 85, "https://noahvdaa.me/FAHSignature/", $creditcolor);
+	//imagestring($im, 1, 325, 85, "https://fahsig.noahvdaa.me/", $creditcolor);
 }
+
+imagestring($im, 2, 0, 85, "THIS PROJECT HAS MOVED TO https://fahsig.noahvdaa.me/. PLEASE USE THIS NEW URL", $error_color);
 
 imagepng($im);
 imagedestroy($im);
