@@ -1,7 +1,0 @@
-{
-	"name": "FAHSignature",
-	"description": "",
-	"require": {
-	  "ext-gd": "*"
-	}
-  }
